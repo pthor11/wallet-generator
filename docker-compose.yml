@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  wallet-paper-generator:
+    container_name: wallet-paper-generator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "$PORT:$PORT"
+    env_file: .env
+    restart: always
