@@ -13,8 +13,14 @@ enum Platform {
     trx
 }
 
+enum TronNetwork {
+    nile
+    main
+}
+
 type Query {
-    getKeyPair(platform: Platform): JSON
+    getKeyPair(platform: Platform!): JSON
+    decodeTronTransaction(network: TronNetwork!, txid: String!): JSON
 }
 
 `
